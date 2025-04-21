@@ -19,7 +19,7 @@ const censorlessABI = [
     }
 ];
 
-const contractAddress = '0xYourContractAddressHere';
+const contractAddress = import.meta.env.VITE_CONTRACT_ADDRESS as string;
 const censorlessContract = new web3.eth.Contract(censorlessABI, contractAddress);
 
 async function redirectToEndpoint() {
