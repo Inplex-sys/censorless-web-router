@@ -18,8 +18,7 @@ The Censorless Web Router consists of two main components:
 When censorship occurs, the website owner can update the endpoint in the blockchain, and all users visiting the router will be automatically redirected to the new location.
 
 ## 🏗️ Architecture
-![image](https://github.com/user-attachments/assets/5a144dbe-78e0-4f30-a2e9-aa12adbd5f53)
-
+![image](https://github.com/user-attachments/assets/32cfffb9-eb07-447b-aeaa-d306459aa1d3)
 
 ## 🚀 Setup
 
