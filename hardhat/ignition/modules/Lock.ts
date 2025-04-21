@@ -1,20 +1,18 @@
 // This setup uses Hardhat Ignition to manage smart contract deployments.
 // Learn more about it at https://hardhat.org/ignition
 
-import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
+import { buildModule } from '@nomicfoundation/hardhat-ignition/modules';
 
-const JAN_1ST_2030 = 1893456000;
-const ONE_GWEI: bigint = 1_000_000_000n;
+const CensorlessModule = buildModule("CensorlessModule", (m) => {
+    const initialEndpoint = m.getParameter("initialEndpoint", "");
 
-const LockModule = buildModule("LockModule", (m) => {
-  const unlockTime = m.getParameter("unlockTime", JAN_1ST_2030);
-  const lockedAmount = m.getParameter("lockedAmount", ONE_GWEI);
+    const censorless = m.contract("Censorless", []);
 
-  const lock = m.contract("Lock", [unlockTime], {
-    value: lockedAmount,
-  });
+    if (initialEndpoint.defaultValue !== "") {
+        m.call(censorless, "setEndpoint", [initialEndpoint]);
+    }
 
-  return { lock };
+    return { censorless };
 });
 
-export default LockModule;
+export default CensorlessModule;
