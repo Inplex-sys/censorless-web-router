@@ -1,6 +1,6 @@
 # 🌐 Censorless Web Router 🛡️
 
-A censorship-resistant web application that uses blockchain technology to dynamically route users to the correct endpoint, even if traditional DNS or domain services are blocked or compromised.
+A censorship-resistant web application that uses **blockchain** technology and **IPFS** to dynamically route users to the correct endpoint, even if traditional DNS or domain services are blocked or compromised.
 
 ## 🤔 How It Works
 
