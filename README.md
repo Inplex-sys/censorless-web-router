@@ -1,7 +1,5 @@
 ![IPFS](https://github.com/ipfs) | ![Optimism](https://github.com/ethereum-optimism/optimism) | ![BUN](https://bun.sh/)
 
-<!-- Add danger banner -->
-
 > # ⚠️ Warning
 > **To avoid supply chain attacks, please consider not updating the packages in this repository.**
 > **All current dependencies have been checked for their specific versions.**
