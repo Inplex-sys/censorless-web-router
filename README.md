@@ -1,3 +1,5 @@
+![IPFS](https://github.com/ipfs) | ![Optimism](https://github.com/ethereum-optimism/optimism)
+
 # 🌐 Censorless Web Router 🛡️
 
 A censorship-resistant web application that uses **blockchain** technology and **IPFS** to dynamically route users to the correct endpoint, even if traditional DNS or domain services are blocked or compromised.
