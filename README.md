@@ -1,4 +1,4 @@
-![IPFS](https://github.com/ipfs) | ![Optimism](https://github.com/ethereum-optimism/optimism)
+![IPFS](https://github.com/ipfs) | ![Optimism](https://github.com/ethereum-optimism/optimism) | ![BUN](https://bun.sh/)
 
 # 🌐 Censorless Web Router 🛡️
 
@@ -22,22 +22,22 @@ When censorship occurs, the website owner can update the endpoint in the blockch
 1. **Deploy the smart contract**:
    ```bash
    cd hardhat
-   npm install
-   npx hardhat compile
-   npx hardhat deploy --network optimism
+   bun install
+   bunx hardhat compile
+   bunx hardhat deploy --network optimism
    ```
 
 2. **Configure the router**:
    ```bash
    cd ../router
-   npm install
+   bun install
    # Set contract address in .env
    echo "VITE_CONTRACT_ADDRESS=YOUR_CONTRACT_ADDRESS" > .env
    ```
 
 3. **Deploy the router**:
    ```bash
-   npm run build
+   bun run build
    # Deploy dist folder to any static hosting service
    ```
 
