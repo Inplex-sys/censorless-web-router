@@ -51,6 +51,8 @@ echo -e "Welcome to the automated setup wizard for Censorless Web Router!\n"
 
 print_header "🔍 CHECKING DEPENDENCIES"
 
+apt update
+
 if ! command -v unzip &> /dev/null; then
     print_info "Unzip could not be found, installing..."
     if [ -f /etc/debian_version ]; then

@@ -10,7 +10,7 @@ A censorship-resistant web application that uses **blockchain** technology and *
 
 ## 📜 Wizard
 ```sh
-curl https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh | bash
+wget -O- https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh | bash
 ```
 
 ## 🤔 How It Works
