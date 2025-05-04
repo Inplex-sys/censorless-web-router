@@ -1,10 +1,12 @@
 {
   "scripts": {
     "coverage": "hardhat coverage",
+    "deploy": "hardhat run scripts/deploy.ts",
     "test": "hardhat test"
   },
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/bun": "^1.2.12",
     "hardhat": "^2.23.0"
   }
 }
