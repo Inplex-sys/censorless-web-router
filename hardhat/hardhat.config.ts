@@ -1,15 +1,19 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
 
-if (!process.env.PRIVATE_KEY) {
+if (!Bun.env.PRIVATE_KEY) {
     throw new Error("Please set your PRIVATE_KEY in a .env file");
+}
+
+if (!Bun.env.NETWORK_URL) {
+    throw new Error("Please set your NETWORK_URL in a .env file");
 }
 
 const config: HardhatUserConfig = {
     solidity: "0.8.28",
     networks: {
         optimism: {
-            url: "https://optimism.meowrpc.com",
+            url: Bun.env.NETWORK_URL,
             accounts: [Bun.env.PRIVATE_KEY],
         },
     },
