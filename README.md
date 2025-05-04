@@ -9,7 +9,9 @@
 A censorship-resistant web application that uses **blockchain** technology and **IPFS** to dynamically route users to the correct endpoint, even if traditional DNS or domain services are blocked or compromised.
 
 ## 📜 Wizard
-`curl https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh | bash`
+```sh
+curl https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh | bash
+```
 
 ## 🤔 How It Works
 
