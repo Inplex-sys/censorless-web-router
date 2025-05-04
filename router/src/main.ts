@@ -7,7 +7,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
 `
 
-const web3 = new Web3('wss://optimism-rpc.publicnode.com');
+const web3 = new Web3(import.meta.env.NETWORK_RPC as string);
 
 const censorlessABI = [
     {
