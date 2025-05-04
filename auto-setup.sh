@@ -47,6 +47,21 @@ echo -e "Welcome to the automated setup wizard for Censorless Web Router!\n"
 
 print_header "🔍 CHECKING DEPENDENCIES"
 
+if ! command -v unzip &> /dev/null; then
+    print_info "Unzip could not be found, installing..."
+    if [ -f /etc/debian_version ]; then
+        sudo apt update
+        sudo apt install unzip -y
+    elif [ -f /etc/redhat-release ]; then
+        sudo yum install unzip -y
+    else
+        print_error "Unsupported OS. Please install unzip manually."
+    fi
+    print_success "Unzip installed successfully!"
+else
+    print_success "Unzip is already installed!"
+fi
+
 print_step "Checking for Bun runtime..."
 if ! command -v bun &> /dev/null; then
     print_info "Bun could not be found, installing..."
