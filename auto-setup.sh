@@ -50,10 +50,10 @@ print_header "🔍 CHECKING DEPENDENCIES"
 if ! command -v unzip &> /dev/null; then
     print_info "Unzip could not be found, installing..."
     if [ -f /etc/debian_version ]; then
-        sudo apt update
-        sudo apt install unzip -y
+        apt update
+        apt install unzip -y
     elif [ -f /etc/redhat-release ]; then
-        sudo yum install unzip -y
+        yum install unzip -y
     else
         print_error "Unsupported OS. Please install unzip manually."
     fi
@@ -81,10 +81,10 @@ print_step "Checking for Git..."
 if ! command -v git &> /dev/null; then
     print_info "Git could not be found, installing..."
     if [ -f /etc/debian_version ]; then
-        sudo apt update
-        sudo apt install git -y
+        apt update
+        apt install git -y
     elif [ -f /etc/redhat-release ]; then
-        sudo yum install git -y
+        yum install git -y
     else
         print_error "Unsupported OS. Please install Git manually."
     fi
