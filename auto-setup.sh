@@ -8,6 +8,10 @@ CYAN='\033[0;36m'
 BOLD='\033[1m'
 NC='\033[0m'
 
+if [ "$(id -u)" -ne 0 ]; then
+    echo -e "${RED}${BOLD}💀 This script must be run as root!${NC}"
+    exit 1
+fi
 CURRENT_DIR=$(pwd)
 
 print_header() {
