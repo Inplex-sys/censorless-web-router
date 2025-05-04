@@ -127,6 +127,9 @@ print_success "Environment configured!"
 
 print_header "📝 DEPLOYING CONTRACT"
 print_info "⚠️  You must have enough ETH in your wallet to deploy the contract (at least 1$ for gas fee)"
+print_step "Press Enter when the account is funded..."
+read -r
+
 echo -e "${YELLOW}Deploying contract to Optimism network...${NC}"
 CONTRACT_ADDRESS=$(bun run deploy --network optimism)
 
