@@ -114,12 +114,22 @@ print_success "Dependencies installed!"
 print_header "⚙️  CONFIGURATION"
 
 echo -e "${BOLD}Please provide the following information:${NC}"
+echo -e "${RED}⚠️  WARNING: NEVER share your private key with anyone! This script runs locally.${NC}"
 echo -e "${CYAN}┌────────────────────────────────────────┐${NC}"
-echo -ne "${CYAN}│${NC} 🔑 Enter your private key: ${BOLD}"
-read PRIVATE_KEY
-echo -ne "${NC}${CYAN}│${NC} 🔌 Enter your network RPC: ${BOLD}"
+echo -e "${CYAN}│${NC} 🔑 Enter your private key (input will be hidden): "
+read -s PRIVATE_KEY
+echo
+echo -ne "${NC}${CYAN}│${NC} 🔌 Enter your network RPC URL: ${BOLD}"
 read NETWORK_RPC
 echo -e "${NC}${CYAN}└────────────────────────────────────────┘${NC}"
+
+if [ -z "$PRIVATE_KEY" ]; then
+    print_error "Private key cannot be empty. Please restart the script."
+fi
+
+if [ -z "$NETWORK_RPC" ]; then
+    print_error "Network RPC URL cannot be empty. Please restart the script."
+fi
 
 cat > .env << EOF
 PRIVATE_KEY=$PRIVATE_KEY
