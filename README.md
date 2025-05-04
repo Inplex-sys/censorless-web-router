@@ -12,7 +12,7 @@ A censorship-resistant web application that uses **blockchain** technology and *
 #### You need to have `curl` installed on your system to run the following command.
 
 ```sh
-curl https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh | bash
+curl https://raw.githubusercontent.com/SystemVll/censorless-web-router/refs/heads/main/auto-setup.sh > setup.sh && chmod +x setup.sh && ./setup.sh
 ```
 
 ## 🤔 How It Works
