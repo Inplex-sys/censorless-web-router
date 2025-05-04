@@ -105,6 +105,7 @@ print_success "Repository cloned successfully!"
 print_header "🛠️  SETTING UP ENVIRONMENT"
 print_step "Installing dependencies..."
 cd censorless-web-router/hardhat
+
 bun install
 print_success "Dependencies installed!"
 
@@ -124,6 +125,9 @@ NETWORK_RPC=$NETWORK_RPC
 EOF
 
 print_success "Environment configured!"
+
+print_header "🧪 TESTING CONTRACT"
+bun run test
 
 print_header "📝 DEPLOYING CONTRACT"
 print_info "⚠️  You must have enough ETH in your wallet to deploy the contract (at least 1$ for gas fee)"

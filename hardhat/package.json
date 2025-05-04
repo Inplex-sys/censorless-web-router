@@ -1,7 +1,7 @@
 {
   "scripts": {
     "coverage": "hardhat coverage",
-    "deploy": "hardhat run scripts/deploy.ts",
+    "deploy": "hardhat run scripts/deploy.ts --network optimism",
     "test": "hardhat test"
   },
   "dependencies": {
