@@ -33,8 +33,8 @@ When censorship occurs, the website owner can update the endpoint in the blockch
    ```bash
    cd hardhat
    bun install
-   bunx hardhat compile
-   bunx hardhat deploy --network optimism
+   bun run test # Run tests to ensure everything is working
+   bun run deploy
    ```
 
 2. **Configure the router**:
@@ -48,7 +48,7 @@ When censorship occurs, the website owner can update the endpoint in the blockch
 3. **Deploy the router**:
    ```bash
    bun run build
-   # Deploy dist folder to any static hosting service
+   # Deploy dist folder to any static hosting service (We highly recommend using IPFS)
    ```
 
 ## 💻 Usage
