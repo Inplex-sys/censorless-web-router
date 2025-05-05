@@ -147,7 +147,7 @@ print_step "Press Enter when the account is funded..."
 read -r
 
 echo -e "${YELLOW}Deploying contract to Optimism network...${NC}"
-CONTRACT_ADDRESS=$(bun run deploy --network optimism)
+CONTRACT_ADDRESS=$(bun run deploy)
 
 if [ -z "$CONTRACT_ADDRESS" ]; then
     print_error "Failed to deploy contract. Check your private key and network RPC."
